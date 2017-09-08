@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Task Manager - Quero Educar</title>
+  <link rel="stylesheet" href="css/app.css">
+</head>
+
+<body>
+  <section class="wrapper">
+    <header class="header">
+      <div id="buttons-bar" class="menu-bar">
+
+        <div class="menu">
+          <i class="icon-menu"></i>
+        </div>
+
+        <div class="button active first">My Tasks</div>
+
+        <div class="button">Inbox</div>
+
+        <div class="button">
+          <i class="icon-add"></i>
+        </div>
+
+        <div class="search">
+          <input type="text" class="search" placeholder="Search" />
+
+        </div>
+
+        <div class="help">Help <span></span></div>
+
+        <div class="personal">Personal Projects
+          <span class="avatar">
+            <img height="32" width="32" src="img/avatar.png" alt="Avatar">
+          </span>
+        </div>
+
+    </header>
+    <section class="task-manager">
+      <header class="header">
+
+        <div class="title">
+          <div class="avatar">
+            <img height="32" width="32" src="img/avatar.png" alt="Avatar">
+          </div>
+          <h1>My Personal Tasks </h1>
+          <span></span>
+        </div>
+
+        <div class="up">
+            <i class="icon-up"></i>
+        </div>
+
+      </header>
+
+      <section class="main">
+        <section class="primary">
+          <header class="header tasks">
+            <button id="addTask">Add Task</button>
+            <div class="settings">
+                <i class="icon-settings"></i>
+            </div>
+          </header>
+
+          <section class="tasks">
+            <ul class="tasks-list" id="taskList">
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </section>
+
+        </section>
+
+        <section class="secondary" id="createAndEditView">
+          <header class="header tasks">
+            <div class="avatar">
+              <img height="32" width="32" src="img/avatar.png" alt="Avatar">
+            </div>
+            <span class="name"> Roger Garcia </span>
+            <div class="icon-selected">
+              <img height="15" width="15" src="img/icon-selected.png" alt="offline">
+            </div>
+            <div class="icon-calendar">
+              <img height="32" width="32" src="img/icon-calendar.png" alt="calendar">
+            </div>
+            <span class="date"> Due Date </span>
+            <div class="icon-like">
+              <img height="32" width="32" src="img/icon-like.png" alt="like">
+            </div>
+            <div class="icon-parent">
+              <img height="32" width="32" src="img/icon-parent.png" alt="parent">
+            </div>
+            <div class="icon-attachment">
+              <img height="32" width="32" src="img/icon-attachment.png" alt="attachment">
+            </div>
+            <div class="icon-more">
+              <img height="32" width="32" src="img/icon-more.png" alt="more">
+            </div>
+            <div class="icon-close" id="close">
+                <img height="14" width="14" src="img/icon-close.png" alt="close">
+            </div>
+          </header>
+
+          <section class="task">
+            <div class="new-task">
+              <input type="text" placeholder="New Task" id="taskInput" />
+            </div>
+            <div class="description">
+              <textarea placeholder="Description" id="taskDescription"></textarea>
+            </div>
+          </section>
+
+          <footer>
+            <section>
+                <div class="avatar">
+                    <img height="32" width="32" src="img/avatar.png" alt="Avatar">
+                </div>
+                <div class="comment">
+                    <textarea placeholder="Write a comment..."></textarea>
+                </div>
+            </section>
+          </footer>
+
+        </section>
+      </section>
+    </section>
+  </section>
+
+  <script src="app/controller/task-manager.controller.js"></script>
+  <script src="app/controller/task-item.controller.js"></script>
+  <script src="app/app.js"></script>
+  <!--<script src="node_modules/todomvc-common/base.js"></script>
+  <script src="js/helpers.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/model.js"></script>
+  <script src="js/template.js"></script>
+  <script src="js/view.js"></script>
+  <script src="js/controller.js"></script>
+  <script src="js/app.js"></script>-->
+</body>
+
+</html>

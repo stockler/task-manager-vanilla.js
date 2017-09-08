@@ -1,0 +1,506 @@
+html, 
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #A1ABB3;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+}
+
+[draggable] {
+  user-select: none;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  left: 0;
+  position: absolute;
+}
+
+.wrapper > .header {
+  height: 40px;
+  width: 100%;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.menu-bar {
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.avatar {
+	position: absolute;
+	display: inline-block;
+	margin: 5px;
+  border: 2px solid rgba(255,255,255,0.4);
+	border-radius: 50%;	
+	transition: linear 0.25s;
+  height: 32px;
+  width: 32px;
+  top: -3px;
+}
+
+.active {
+  color: #151B26;
+}
+
+.avatar img {
+	border-radius: 50%;
+}
+
+.title {
+      
+      margin-left: auto;
+      margin-right: auto;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      align-content: center;
+      top: -10px;
+      position: relative;
+}
+
+.task-manager {
+  height: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
+}
+
+.task-manager .header {
+  text-align: center;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+  line-height: 10px;
+  position: relative;
+  border-bottom: 1px solid #e3e3e3;
+}
+
+.task-manager .header .avatar {
+  position: relative;
+}
+
+.task-manager .header h1 {
+  font-size: 20px;
+  font-weight: 400;
+  color: #000;
+  margin-bottom: 15px;
+}
+
+.task-manager > .header span {  
+  padding-left: 10px;
+  background: url(../img/icon-down.png) no-repeat 0 5px;
+  margin-left: 5px;
+  width: 15px;
+  height: 15px;
+  top: -4px;
+  position: relative;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: space-between;
+  height: 100%;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 10px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
+}
+
+.primary {
+  width: 984px;
+  border: 1px solid #e3e3e3;
+  border-radius: 5px;
+  height: 100%;
+  
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
+}
+
+.secondary {
+  width: 60%; 
+  border: 1px solid #e3e3e3;
+  border-radius: 5px;
+  height: 80%;
+  display: none;
+  margin-left: 20px;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
+}
+
+.secondary > footer {
+  bottom: 0;
+  position: absolute;
+  height: 119px;
+  background-color: #F6F8F9;
+  width: 100%;
+}
+
+.secondary > footer > section {
+  margin: 10px;
+  position: relative;
+}
+
+.comment {
+  margin-left: 50px;
+  position: relative;
+  top: 5px;
+}
+
+.comment textarea {
+  position: relative;
+  top: 5px;
+  border: 0;
+  color: #99A3AD;
+  resize: none;
+  
+  font-size: 12px;
+  padding: 5px;
+  width: 95%;
+  height: 85px;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+
+  border-radius: 2px;
+  border: 1px solid #e3e3e3;
+  outline: none;
+}
+
+.main .header {
+  height: 50px;
+  border-bottom: 1px solid #e3e3e3;
+}
+
+.main .header button {
+    margin-left: 30px; 
+    border: 1px solid #45B0F6;
+    background-color: transparent;
+    border-radius: 5px;
+    color: #45B0F6;
+    width: 70px;
+    height: 30px;
+    font-weight: bold;
+  
+}
+
+.menu {
+  width: 43px;
+  height: 40px;
+  position: relative;
+  border-right: 1px solid #e3e3e3;
+}
+
+.button {
+  position: relative;
+  height: 40px;
+  padding-left: 20px;
+  padding-right: 10px; 
+  line-height: 40px;
+}
+
+.first {
+  padding-left: 30px;
+}
+
+.orange-button {
+  border:2px solid #FEFEFE;   
+  box-shadow: inset 5px 5px 5px  rgba(255,255,255,0.25);
+  background-color: orange;  
+}
+
+.rounded-button {
+  border-radius: 100%;
+}
+
+.icon {
+  width: 22px;
+  height: 22px;
+  position: absolute;
+}
+
+.icon-menu {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  width: 22px;
+  height: 22px;
+  display: block;
+  background: url(../img/icon-menu.png) no-repeat center center;
+}
+
+.icon-add {
+  position: absolute;
+  top: 16%;
+  left: 25%;
+  width: 28px;
+  height: 28px;
+  display: block;
+  background: url(../img/icon-add.png) no-repeat center center;
+}
+
+.up {
+  position: absolute;
+  bottom: 25px;
+  cursor: pointer;
+}
+
+.icon-up {
+  position: absolute;
+  top: 16%;
+  left: 25%;
+  width: 28px;
+  height: 28px;
+  display: block;
+  background: url(../img/icon-up.png) no-repeat center center;
+}
+
+.settings {
+  position: absolute;
+  cursor: pointer;
+  right: 35px;
+  top: 13px;
+}
+
+.icon-settings {
+  position: absolute;
+  top: 16%;
+  left: 25%;
+  width: 28px;
+  height: 28px;
+  display: block;
+  background: url(../img/icon-settings.png) no-repeat center center;
+}
+
+.search {
+  flex: 1;
+  text-align: center;
+}
+
+.search input {
+  width: 500px;
+  height: 30px;
+  border: 1px solid #e3e3e3;
+  border-radius: 20px;
+  line-height: 40px;
+
+  text-align: left;
+  
+  background-image: url(../img/icon-search.png);
+  background-repeat: no-repeat;
+  background-position: 10px;
+  /*border:1px solid #DADADA;*/
+  /*margin-top: 10px;*/
+  padding-left:35px;
+
+  font-size:14px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+
+  outline: none;
+}
+
+
+.help {
+  position: relative;
+  height: 40px;
+  padding-left: 20px;
+  line-height: 40px;
+  width: 100px;
+}
+
+.help span {
+  padding-left: 10px;
+  background: url(../img/icon-down.png) no-repeat 0 5px;
+  margin-left: 5px;
+}
+
+.personal {
+  position: relative;
+  padding-right: 15px;
+  line-height: 40px;
+  width: 153px;
+}
+
+.tasks-list {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.tasks-list li {
+  height: 35px;
+  list-style-type: none;
+  padding-left: 20px;
+  padding-right: 20px;
+  position: relative;
+}
+
+.tasks-list li:after {
+  border-bottom: 1px solid #e3e3e3;
+  content: '';
+  position: relative;
+  width: 100%;
+  left: 0;
+  height: 35px;
+  display: block;
+}
+
+.tasks-list li span {
+  line-height: 35px;
+  height: 35px;
+  left: 50px;
+  position: absolute;
+  color: #000;
+}
+
+.tasks-list li span:before {
+  content: '';
+  background-image: url(../img/icon-check-t.png);
+  background-repeat: no-repeat;
+  background-position: 0px;
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  left: -28px;
+}
+
+.disabled {
+  color: #e0e0e0 !important;
+  border-color: #e0e0e0 !important;
+}
+
+.new-task {
+  border-radius: 2px;
+  margin: 10px;
+  margin-top: 50px;
+  position: relative;
+  color: #99A3AD;
+}
+
+.focus {
+  border: 1px solid #e3e3e3;
+  outline: none;
+}
+
+.description {
+  margin-left: 50px;
+  margin-right: 25px;
+}
+.description textarea {
+  border: 0;
+  position: relative;
+  color: #99A3AD;
+  resize: none;
+  
+  font-size: 12px;
+  padding: 5px;
+  width: 100%;
+  height: 60px;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.description textarea:focus {
+  border-radius: 2px;
+  border: 1px solid #e3e3e3;
+  outline: none;
+}
+
+.new-task input {
+  text-align: left;
+  
+  background-image: url(../img/icon-check-gt.png);
+  background-repeat: no-repeat;
+  background-position: 6px;
+  /*border:1px solid #DADADA;*/
+  /*margin-top: 10px;*/
+  padding-left: 40px;
+
+  border: 0;
+
+  outline: none;
+  font-size: 24px;
+  font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 5px;
+  color: #99A3AD;
+}
+
+.tasks .avatar {
+  margin-left: 20px;
+}
+
+.tasks .name {
+  margin-left: 6px;
+  color: #000;
+  font-size: 12px;
+}
+
+.tasks .icon-selected {
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.tasks .icon-calendar {
+  margin-left: 35px;
+  cursor: pointer;
+}
+
+.tasks .date {
+  margin-left: 10px;
+
+}
+
+.tasks .icon-like {
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+.tasks .icon-parent,
+.tasks .icon-attachment,
+.tasks .icon-more
+{
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.tasks .icon-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+}
+
+.selected {
+  background-color: #EDF8FE;
+}
+
+
+
+
